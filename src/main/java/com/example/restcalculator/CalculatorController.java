@@ -30,7 +30,20 @@ public class CalculatorController {
         return a / b;
     }
 
+    @RequestMapping("/multiplication")
+    public int multiplication(
+            @RequestParam int a,
+            @RequestParam int b
+    ){
+        return a * b;
+    }
 
-
+    @RequestMapping("/sub")
+    public int sub(
+            @RequestParam int a,
+            @RequestParam int b
+    ){
+        return a - b;
+    }
 
 }
