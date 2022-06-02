@@ -54,5 +54,11 @@ public class CalculatorController {
         return Math.pow(a,b);
     }
 
+    @RequestMapping("/absolut")
+    public int absolut(
+            @RequestParam int a
+    ){
+        return Math.abs(a);
+    }
 
 }
