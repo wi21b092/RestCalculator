@@ -46,4 +46,13 @@ public class CalculatorController {
         return a - b;
     }
 
+    @RequestMapping("/exp")
+    public double exp(
+            @RequestParam int a,
+            @RequestParam int b
+    ){
+        return Math.pow(a,b);
+    }
+
+
 }
