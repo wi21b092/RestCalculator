@@ -21,4 +21,16 @@ public class CalculatorController {
     ){
         return a + b;
     }
+
+    @RequestMapping("/division")
+    public int division(
+            @RequestParam int a,
+            @RequestParam int b
+    ){
+        return a / b;
+    }
+
+
+
+
 }
