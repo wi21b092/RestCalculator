@@ -14,12 +14,15 @@ public class CalculatorController {
      * @return sum
      */
 
+    private Calculator calculator = new Calculator();
+
+
     @RequestMapping("/sum")
     public int sum(
             @RequestParam(name = "x") int a,
             @RequestParam int b
     ){
-        return a + b;
+        return calculator.sum(a, b);
     }
 
     @RequestMapping("/division")
@@ -27,7 +30,7 @@ public class CalculatorController {
             @RequestParam int a,
             @RequestParam int b
     ){
-        return a / b;
+        return calculator.division(a, b);
     }
 
     @RequestMapping("/multiplication")
@@ -35,7 +38,7 @@ public class CalculatorController {
             @RequestParam int a,
             @RequestParam int b
     ){
-        return a * b;
+        return calculator.multiplication(a, b);
     }
 
     @RequestMapping("/sub")
@@ -43,7 +46,7 @@ public class CalculatorController {
             @RequestParam int a,
             @RequestParam int b
     ){
-        return a - b;
+        return calculator.sub(a, b);
     }
 
     @RequestMapping("/exp")
@@ -51,20 +54,20 @@ public class CalculatorController {
             @RequestParam int a,
             @RequestParam int b
     ){
-        return Math.pow(a,b);
+        return calculator.exp(a, b);
     }
 
     @RequestMapping("/absolut")
     public int absolut(
             @RequestParam int a
     ){
-        return Math.abs(a);
+        return calculator.absolut(a);
     }
     @RequestMapping("/sqrt")
     public double sqrt(
             @RequestParam int a
     ){
-        return Math.sqrt(a);
+        return calculator.sqrt(a);
     }
 
 }
