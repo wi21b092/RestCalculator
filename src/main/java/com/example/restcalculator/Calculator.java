@@ -7,6 +7,9 @@ public class Calculator {
     }
 
     public int division (int a, int b){
+        if(b == 0){
+            throw new ArithmeticException("division by zero exception");
+        }
         return a/b;
     }
     public int multiplication(int a, int b){
